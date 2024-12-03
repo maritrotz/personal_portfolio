@@ -1,0 +1,86 @@
+.homeVideo{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position:20% 19.5%;
+  position: absolute;
+  z-index: -1;  
+}
+
+
+.hero-container {
+  height: 100vh;
+  width: 100%;
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  position: relative; /* Ensure children position correctly */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+
+/* .hero-contaniner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+} */
+
+.hero-container > h1 {
+  color: #fff;
+  font-size: 100px;
+  margin: 0; /* Remove extra margin */
+  text-align: center;
+  z-index: 1; /* Ensure the text is above the background */
+}
+
+
+
+.hero-btns {
+  margin-top: 50px; /* Moves the button further down below the heading */
+}
+
+.hero-btns .btn {
+  margin: 6px;
+  font-size: 20px;
+  width: auto; /* Let the width adjust automatically */
+  height: auto; /* Let the height adjust automatically */
+}
+
+.hero-btns .btn:hover {
+  transform: scale(1.1); /* Optional: Slightly increase size on hover */
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: 0px;
+  }
+
+  .hero-container > p {
+    font-size: 30px;
+  }
+
+  .btn-mobile {
+    display: inline-flex;
+    text-decoration: none;
+
+  }
+
+  .btn {
+    width: 100%;
+  
+  }
+}
